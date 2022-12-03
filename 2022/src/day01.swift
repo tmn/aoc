@@ -1,8 +1,7 @@
 import Foundation
 
-let data = try String(contentsOfFile: "./inputs/day01.txt")
-var values = data.components(separatedBy: "\n\n").map {
-    $0.components(separatedBy: "\n").compactMap { Int($0) }.reduce(0, +)
+var values = try String(contentsOfFile: "./inputs/day01.txt").components(separatedBy: "\n\n").map {
+    $0.components(separatedBy: .newlines).compactMap { Int($0) }.reduce(0, +)
 }
 values.sort()
 
