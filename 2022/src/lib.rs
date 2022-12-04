@@ -2,6 +2,7 @@ use std::path::PathBuf;
 
 pub mod day01;
 pub mod day02;
+pub mod day03;
 
 pub fn read_input(day: u8) -> String {
     let cwd: PathBuf = std::env::current_dir().unwrap();
